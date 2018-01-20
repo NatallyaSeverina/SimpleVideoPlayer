@@ -23,18 +23,18 @@ Below that add this script with your div element and video url
   })();
 ```
 
-And add style tag with this content
+And add style tag with this content like this
 
 ```css
-    .progressBar {
-			width: 650px;
-		}
-		[data-role="play-pause"].paused:after {
-			font-weight: bold;
-			content: '>';
-		}
-		[data-role="play-pause"].played:after {
-			font-weight: bold;
-			content: '||';
-		}
+.progressBar {
+	width: 650px;
+}
+[data-role="play-pause"].paused:after {
+	font-weight: bold;
+	content: '>';
+}
+[data-role="play-pause"].played:after {
+	font-weight: bold;
+	content: '||';
+}
 ```
