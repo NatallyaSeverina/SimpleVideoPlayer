@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="css/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.5.3/mocha.css">
+    <meta charset="utf-8" />
+    <title>Video player</title>
+</head>
+<body>
+	<style>
+		.progressBar {
+			width: 650px;
+		}
+		[data-role="play-pause"].paused:after {
+			font-weight: bold;
+			content: '>';
+		}
+		[data-role="play-pause"].played:after {
+			font-weight: bold;
+			content: '||';
+		}
+	</style>
+    <div id="videoContainer"></div>
+    <script src="https://cdn.rawgit.com/NatallyaSeverina/SimpleVideoPlayer/dc2ac31b/build/js/app.min.js"></script>
+</body>
+</html>
