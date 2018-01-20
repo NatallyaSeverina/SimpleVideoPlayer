@@ -28,10 +28,10 @@ class SimpleVideoPlayer {
     addHandlers() {
         const progressEl = this.htmlEl.querySelector(".progressBar");
         const btnEl = this.htmlEl.querySelector('[data-role="play-pause"]');
-        //this.videoEl.addEventListener("durationchange", data => {
-        //    progressEl.setAttribute("max", this.videoEl.duration);
-        //}
-       // );
+        this.videoEl.addEventListener("durationchange", data => {
+          progressEl.setAttribute("max", this.videoEl.duration);
+        }
+       );
         this.videoEl.addEventListener("timeupdate", data => {
             progressEl.setAttribute("value", this.videoEl.currentTime);
         }
@@ -53,7 +53,7 @@ class SimpleVideoPlayer {
             this.clickHandler()
         }
         );
-        this.htmlEl.querySelector("progress").addEventListener("click", ev => {
+        progressEl.addEventListener("click", ev => {
             let time = parseFloat(ev.target.getAttribute("max")) * ev.offsetX / ev.target.offsetWidth;
             this.progressHandler(time);
         });
